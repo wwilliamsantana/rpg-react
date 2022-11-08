@@ -34,7 +34,7 @@ export function App() {
   return (
     <Container>
         <Map>
-          <Character x={char.x} y={char.y}/>
+          <Character x={char.x} y={char.y} side={char.side}/>
         </Map>
     </Container>
   )
