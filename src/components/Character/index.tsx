@@ -7,6 +7,7 @@ interface Props{
 
 export function Character({x, y}: Props){
   const size = 30
+
   return (
     <Container
       left={x * size}
