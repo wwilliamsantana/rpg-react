@@ -4,7 +4,7 @@ import { Character } from "./components/Character";
 import { useCharacter } from "./hook/useCharacter";
 
 export function App() {
-  const char = useCharacter()
+  const char = useCharacter("William")
 
   function handleKeyDown(event: KeyboardEvent){
     switch(event.code){
@@ -34,7 +34,7 @@ export function App() {
   return (
     <Container>
         <Map>
-          <Character x={char.x} y={char.y} side={char.side}/>
+          <Character x={char.x} y={char.y} side={char.side} name={char.name}/>
         </Map>
     </Container>
   )

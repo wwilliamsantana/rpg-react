@@ -1,13 +1,14 @@
 import { CharacterSides } from "../../hook/useCharacter";
-import { Container } from "./styles";
+import { Container, Nickname } from "./styles";
 
 interface Props{
   x: number
   y: number
   side: CharacterSides
+  name: string
 }
 
-export function Character({x, y, side}: Props){
+export function Character({x, y, side, name}: Props){
   const size = 30
 
   const valueSide = {
@@ -25,6 +26,9 @@ export function Character({x, y, side}: Props){
       size={size}
       side={valueSide[side]}
     >
+    <Nickname>
+     {name}
+    </Nickname>
       
     </Container>
   )
